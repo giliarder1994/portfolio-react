@@ -1,0 +1,97 @@
+.article {
+  background-color: var(--fundo-card);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.article h2 {
+  color: var(--destaque);
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 8px 14px;
+  border: none;
+  background-color: var(--fundo-principal);
+  color: var(--texto);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.tab:hover {
+  background-color: var(--destaque-inverso);
+}
+
+.tabActive {
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+}
+
+.projetoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-color 0.5s, border-width 0.5s;
+  cursor: pointer;
+}
+
+.projeto:hover {
+  border-color: var(--destaque);
+  border-left-width: 15px;
+}
+
+.foto {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.titulo {
+  margin-bottom: 6px;
+}
+
+.projetoInfo p {
+  font-size: 0.9em;
+}
+
+@media screen and (min-width: 768px) {
+  .projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 150px;
+  }
+
+  .projetoInfo {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .foto {
+    aspect-ratio: 1/1;
+    max-width: 20%;
+    max-height: 200px;
+  }
+}
